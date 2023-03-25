@@ -9,7 +9,7 @@ ENV PYTHONUNBUFFERED 1
 # Install django dependencies
 RUN pip install --upgrade pip
 COPY requirements.txt /clc-app/
-RUN pip install -r /church_data_project/requirements.txt
+RUN pip install -r /clc-app/requirements.txt
 
 #work directory
 WORKDIR /clc-app/src
