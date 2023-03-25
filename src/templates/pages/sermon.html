@@ -1,0 +1,314 @@
+{% extends '../../dist/templates/pages/base.html' %}
+{% block page_title %}Sermons - Christ's Love Church {% endblock %}
+{% load static %}
+
+{% block content %}
+<section class="">
+
+    <div class="sermon-banner">
+        <img src="{%static 'images/pastor1.jpg' %}" class="desktop-img" alt="Sermon-img">
+        <img src="{%static 'images/pastor2.jpg' %}" class="mobile-img active" alt="Sermon-img">
+        <div class="layer"></div>
+        <div class="container">
+            <div class="sermon-info pb-4 ms-2">
+                <button class="btn btn-accent btn-latest rounded-pill">Latest Episode</button>
+                <h3 class="sermon-title pt-3">Sharing the love of Christ</h3>
+                <div class="col">
+                    <a type="button" class="text-center px-3" href=""><i class="bi bi-play"></i><br>Play</a>
+                    <a type="button" class="text-center px-3" href=""><i class="bi bi-download"></i> <br>Download</a>
+                    <a type="button" class="text-center px-3" href=""><i class="bi bi-file-earmark-text"></i>
+                        <br>Read</a>
+                    <a type="button" class="text-center px-3" href=""><i class="bi bi-share"></i> <br>Share</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="search-sermon pb-3">
+    <div class="container">
+        <h2>Search Sermon</h2>
+        <div class="row text-center">
+            <form action="" method="">
+                <button type="button"
+                    class="btn btn-b-n form-control justify-content-center sermon-search  search-bar mx-2"
+                    data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+                    <input type="text" class="border-0  search-input"
+                        placeholder="Search sermons by sermon title, dates, tags etc">
+                    <i class="bi bi-sliders"></i>
+                </button>
+                <button class="btn btn-secondary mt-3" type="submit">Search Sermon</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="recent-sermon">
+    <div class="container">
+        <h2>Recent Sermon</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{%static 'images/Papa-adeboye.webp' %}" class="w-100 h-100 rounded-start" alt="sermon-thumbnail">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">God’s love for us</h4>
+                                <p class="card-text"><span class="text-muted">Speaker: </span> Pastor Mubarak Kwota</p>
+                                <div class="col ">
+                                    <a type="button" class="text-center px-2" href=""><i
+                                            class="bi bi-play"></i></a>
+                                    <a type="button" class="text-center px-3" href=""><i class="bi bi-download"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-3" href=""><i
+                                            class="bi bi-file-earmark-text"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-2" href=""><i class="bi bi-share"></i>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-3">
+                    <div class="row g-0 ">
+                        <div class="col-md-4">
+                            <img src="{%static 'images/Pastor-Chris.webp' %}" class="w-100 h-100 rounded-start" alt="sermon-thumbnail">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">God’s love for us</h4>
+                                <p class="card-text"><span class="text-muted">Speaker: </span> Pastor Mubarak Kwota</p>
+                                
+                                <div class="col ">
+                                    <a type="button" class="text-center px-2" href=""><i
+                                            class="bi bi-play"></i></a>
+                                    <a type="button" class="text-center px-3" href=""><i class="bi bi-download"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-3" href=""><i
+                                            class="bi bi-file-earmark-text"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-2" href=""><i class="bi bi-share"></i>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-3">
+                    <div class="row g-0 ">
+                        <div class="col-md-4">
+                            <img src="{%static 'images/Pastor-Chris.webp' %}" class="w-100 h-100 rounded-start" alt="sermon-thumbnail">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">God’s love for us</h4>
+                                <p class="card-text"><span class="text-muted">Speaker: </span> Pastor Mubarak Kwota</p>
+                                
+                                <div class="col ">
+                                    <a type="button" class="text-center px-2" href=""><i
+                                            class="bi bi-play"></i></a>
+                                    <a type="button" class="text-center px-3" href=""><i class="bi bi-download"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-3" href=""><i
+                                            class="bi bi-file-earmark-text"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-2" href=""><i class="bi bi-share"></i>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-3">
+                    <div class="row g-0 ">
+                        <div class="col-md-4">
+                            <img src="{%static 'images/Pastor-Chris.webp' %}" class="w-100 h-100 rounded-start" alt="sermon-thumbnail">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">God’s love for us</h4>
+                                <p class="card-text"><span class="text-muted">Speaker: </span> Pastor Mubarak Kwota</p>
+                                <div class="col ">
+                                    <a type="button" class="text-center px-2" href=""><i
+                                            class="bi bi-play"></i></a>
+                                    <a type="button" class="text-center px-3" href=""><i class="bi bi-download"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-3" href=""><i
+                                            class="bi bi-file-earmark-text"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-2" href=""><i class="bi bi-share"></i>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="popular-sermon">
+    <div class="container">
+        <h2>Popular Sermons</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{%static 'images/Papa-adeboye.webp' %}" class="w-100 h-100 rounded-start" alt="sermon-thumbnail">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body ">
+                                <h4 class="card-title">God’s love for us</h4>
+                                <p class="card-text"><span class="text-muted">Speaker: </span> Pastor Mubarak Kwota</p>
+                                <div class="col ">
+                                    <a type="button" class="text-center px-2" href=""><i
+                                            class="bi bi-play"></i></a>
+                                    <a type="button" class="text-center px-3" href=""><i class="bi bi-download"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-3" href=""><i
+                                            class="bi bi-file-earmark-text"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-2" href=""><i class="bi bi-share"></i>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-3">
+                    <div class="row g-0 ">
+                        <div class="col-md-4">
+                            <img src="{%static 'images/Pastor-Chris.webp' %}" class="w-100 h-100 rounded-start" alt="sermon-thumbnail">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">God’s love for us</h4>
+                                <p class="card-text"><span class="text-muted">Speaker: </span> Pastor Mubarak Kwota</p>
+                                
+                                <div class="col ">
+                                    <a type="button" class="text-center px-2" href=""><i
+                                            class="bi bi-play"></i></a>
+                                    <a type="button" class="text-center px-3" href=""><i class="bi bi-download"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-3" href=""><i
+                                            class="bi bi-file-earmark-text"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-2" href=""><i class="bi bi-share"></i>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-3">
+                    <div class="row g-0 ">
+                        <div class="col-md-4">
+                            <img src="{%static 'images/Pastor-Chris.webp' %}" class="w-100 h-100 rounded-start" alt="sermon-thumbnail">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">God’s love for us</h4>
+                                <p class="card-text"><span class="text-muted">Speaker: </span> Pastor Mubarak Kwota</p>
+                                
+                                <div class="col ">
+                                    <a type="button" class="text-center px-2" href=""><i
+                                            class="bi bi-play"></i></a>
+                                    <a type="button" class="text-center px-3" href=""><i class="bi bi-download"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-3" href=""><i
+                                            class="bi bi-file-earmark-text"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-2" href=""><i class="bi bi-share"></i>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-3">
+                    <div class="row g-0 ">
+                        <div class="col-md-4">
+                            <img src="{%static 'images/Pastor-Chris.webp' %}" class="w-100 h-100 rounded-start" alt="sermon-thumbnail">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">God’s love for us</h4>
+                                <p class="card-text"><span class="text-muted">Speaker: </span> Pastor Mubarak Kwota</p>
+                                <div class="col ">
+                                    <a type="button" class="text-center px-2" href=""><i
+                                            class="bi bi-play"></i></a>
+                                    <a type="button" class="text-center px-3" href=""><i class="bi bi-download"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-3" href=""><i
+                                            class="bi bi-file-earmark-text"></i>
+                                        </a>
+                                    <a type="button" class="text-center px-2" href=""><i class="bi bi-share"></i>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="pagination">
+    <div class="m-auto">
+        <nav aria-label="...">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <span class="page-link">Previous</span>
+              </li>
+              <li class="page-item ms-2"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active mx-2" aria-current="page">
+                <span class="page-link">2</span>
+              </li>
+              <li class="page-item me-2"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+    </div>
+    
+</section>
+<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#video").css("display", "none"); //HIDE THE VIDEO INITIALLY
+        $(".sermon-section").hover(function () {
+            $("#video").css("display", "block"); //SHOW THE VIDEO ON HOVER
+            $(this).children("video")[0].play();
+        },
+
+            function () {
+                var el = $(this).children("video")[0];
+                el.pause();
+                $("#video").css("display", "none");
+
+                el.currentTime = 0;
+            });
+    });
+</script> -->
+{%endblock%}

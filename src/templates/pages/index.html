@@ -1,0 +1,180 @@
+{% extends '../../dist/templates/pages/base.html' %}
+{% block page_title %}Christ's Love Church - Work for the Lord{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<section class="mt-5">
+<div class="container sermon-section">
+    <img src="{%static 'images/pastor1.jpg' %}" class="desktop-img" alt="Sermon-img">
+    <img src="{%static 'images/pastor2.jpg' %}" class="mobile-img active" alt="Sermon-img">
+    <div class="layer"></div>
+    <div class="sermon-info pb-4 ms-2">
+        <button class="btn btn-accent btn-latest rounded-pill">Latest Episode</button>
+        <h3 class="sermon-title">Sharing the love of Christ</h3>
+        <div class="col">
+            <a type="button" class="btn-lg btn-primary m-1" href="">WATCH EPISODE</a>
+            <a type="button" class="btn-lg btn-outline m-1" href="">MORE SERMONS</a>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="experience" class="mt-5">
+    
+    <div class="container experience-section mb-4">
+        <h2>Let’s tailor your Experience</h2>
+        <div class="row">
+            <div class="col-lg-8">
+                    <div class="card shadow rounded border-0">
+                        <a type="button" class="card-body" href="">
+                             <h4><i class="bi bi-geo-alt me-3"></i>Already part of a campus society?</h4>
+                        </a>
+                      </div>    
+                    <div class="card rounded  shadow mt-3 border-0 ">
+                        <a type="button" class="card-body " href="">
+                            <h4><i class="bi bi-person me-3"></i>Visitor here?</h4>
+                        </a>
+                      </div>
+                      <div class="card rounded shadow mt-3 mb-3 border-0" >
+                        <a type="button" class="card-body " href="">
+                            <h4><i class="bi bi-heart-pulse me-3"></i>Join a group</h4>
+                        </a>
+                      </div>
+                  <div class="main-event">
+                    <img src="{%static 'images/pastor.jpg' %}" class="desktop-img" alt="Sermon-img">
+                    <img src="{%static 'images/pastor2.jpg' %}" class="mobile-img" alt="Sermon-img">
+                    <div class="event-info ms-3 mb-4">
+                        <button class="btn btn-accent btn-latest rounded-pill">Conference</button>
+                        <h3 class="sermon-title">Help from Above</h3>
+                        <a type="button" class="btn btn-primary" href="">Learn more</a>
+                      </div>
+                </div>
+
+            </div>
+            
+            <div class="announcement-section col-lg-4">
+                <div class="row">
+                  <div class="upcoming-event shadow">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item border-0 heading">
+                        <h4>Upcoming Activities</h4>
+                        <p>Stay informed on all church activities and ocassions</p>
+                        <hr>
+                    </li>
+                      <li class="list-group-item border-0">
+                        <div class="row">
+                            <div class="col-1"><i class='bx bx-chevron-right font-size-14'></i></div>
+                        <div class="col-11">
+                            <h5>Prayer Retreat</h5>
+                            <span>Prayer retreat with Rev. Mubarak Kwota <br></span>
+                            <i class='bx bx-calendar me-1 font-size-14 align-middle'></i><span class="me-3 align-middle ">Mon - Fri</span>
+                            <i class='bx bx-time-five me-1 font-size-14 align-middle'></i><span class="me-3 align-middle ">6:30pm each night</span>
+                        </div>
+                        </div>
+                    </li>
+                      <li class="list-group-item border-0">
+                        <div class="row">
+                            <div class="col-1"><i class='bx bx-chevron-right font-size-14'></i></div>
+                        <div class="col-11">
+                            <h5>Young People’s Week</h5>
+                            <span>Join us for exciting programs for YPW celebration<br></span>
+                            <i class='bx bx-calendar me-1 font-size-14 align-middle'></i><span class="me-3 align-middle ">Thur - Sat</span>
+                            <i class='bx bx-time-five me-1 font-size-14 align-middle'></i><span class="me-3 align-middle ">6:30pm each night</span>
+                        </div>
+                        </div>
+                    </li>
+                      <li class="list-group-item border-0">
+                        <div class="row">
+                            <div class="col-1"><i class='bx bx-chevron-right font-size-14'></i></div>
+                        <div class="col-11">
+                            <h5>Leader’s meeting</h5>
+                            <span>All organizational heads are encouraged to be present<br></span>
+                            <i class='bx bx-calendar me-1 font-size-14 align-middle'></i><span class="me-3 align-middle ">Mon</span>
+                            <i class='bx bx-time-five me-1 font-size-14 align-middle'></i><span class="me-3 align-middle ">8:00am</span>
+                        </div>
+                        </div>
+                    </li>
+                      <li class="list-group-item border-0">
+                        <div class="row">
+                            <div class="col-1"><i class='bx bx-chevron-right font-size-14'></i></div>
+                        <div class="col-11">
+                            <h5 ><a class="show-more" href="">Show More</a> </h5>
+                            <span>Learn more on other activities happening this week...<br></span>
+                        </div>
+                        </div>
+                    </li>
+                    </ul>
+                  </div>
+                  <div class="social-media text-center mt-3 shadow">
+                      <h3 class="pt-2">Follow Christ’s Love Church</h3>
+                    <div class=" d-flex justify-content-evenly py-3">
+                      <a href=""><i class='bx bxl-youtube'></i></a>
+                    <a href=""><i class='bx bxl-twitter'></i></a>
+                    <a href=""> <i class='bx bxl-facebook'></i></a>
+                    <a href=""> <img src="{%static 'images/Instagram.svg'%}" alt=""></a>
+                    </div>
+                  </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="giving-section">
+  <div class="container giving-text text-center">
+    <h1 class="pb-3">Giving</h1>
+    <h2><img src="{%static 'images/Vectorquote.svg' %}" alt=""></h2>
+    <h2 class="py-3">Each of you should give what you have decided in your heart to give,
+      not reluctantly or under compulsion, for  God loves a cheerful giver</h2>
+    <h2 class="text-white pb-2">2 Corinthians 9:7</h2>
+    <h2 class="pb-3"><img src="{%static 'images/Vectorquote1.svg' %}" alt=""></h2>
+    <a href="" class="btn btn-lg btn-primary">GIVE TODAY</a>
+  </div>
+</section>
+
+<section class="gallery mb-3">
+  <div class="gtco-testimonials">
+    <div class="container heading text-center">
+      <h1>Our Gallery</h1>
+    <h3>Hello there, are you new here? Let’s show you around</h3>
+    <hr>
+    
+    </div>
+    <div class="owl-carousel owl-carousel1 owl-theme">
+      <div>
+        <div class="card text-center">
+          <img src="{%static 'images/children1.jpg'%}" class="card-img w-100" alt="...">
+          <div class="card-img-overlay">
+            <button class="btn btn-accent btn-latest rounded-pill">Sunday School</button>
+          </div>
+        </div>
+      </div>
+      <div> 
+        <div class="card text-center">
+          <img src="{%static 'images/children2.jpg'%}" class="card-img w-100" alt="...">
+          <div class=" card-img-overlay ">
+            <button class="btn btn-accent btn-latest rounded-pill">Sunday School</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card text-center">
+          <img src="{%static 'images/SundaySchoolgallery.jpg'%}" class="card-img w-100" alt="...">
+          <div class=" card-img-overlay ">
+            <button class="btn btn-accent btn-latest rounded-pill">Sunday School</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card text-center">
+          <img src="{%static 'images/children3.jpg'%}" class="card-img w-100" alt="...">
+          <div class=" card-img-overlay ">
+            <button class="btn btn-accent btn-latest rounded-pill">Sunday School</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
