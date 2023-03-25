@@ -1,10 +1,7 @@
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-<<<<<<< HEAD
 
-=======
->>>>>>> 22e9c890ebe54e34706a11658e91cf453d95ca41
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -69,13 +66,26 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.environ.get('MYSQL_DB'),
+            'USER': os.environ.get('MYSQL_USER'),
+            'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
+            'HOST': os.environ.get('MYSQL_HOST'),
+            'PORT': os.environ.get('MYSQL_PORT'),
+        }
+    }
+
+
 
 
 # Password validation
