@@ -91,7 +91,16 @@
          
   }
 
+.logo-hide{
+  display: none;
+}
 
+
+#search-bar-show {
+  display: block;
+  width: 100%;
+  transition: width .3s ease-out;
+}
 
 
 

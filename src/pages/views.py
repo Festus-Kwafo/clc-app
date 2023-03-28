@@ -1,12 +1,15 @@
 from django.shortcuts import render
 from django.views import View
+from pages.models import Sermon, Announcement, Gallery
 
 # Create your views here.
 class IndexView(View):
     template_name = "templates/pages/index.html"
-
     def get(self, request):
-        return render(request, self.template_name)
+        lastest_sermon = Sermon.objects.filter().order_by('-date').first()
+        sermon = Sermon.objects.filter().order_by('-date')[:1]
+        context = {"sermon": lastest_sermon}
+        return render(request, self.template_name, context)
 
 class AboutView(View):
     template_name = "templates/pages/about.html"
@@ -15,6 +18,7 @@ class AboutView(View):
         return render(request, self.template_name)
 
 class SermonView(View):
+
     template_name = "templates/pages/sermon.html"
 
     def get(self, request):

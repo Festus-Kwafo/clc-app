@@ -81,8 +81,16 @@
      * Search window open/close
      */
     let body = select('body');
+    var logo = select('.logo');
+    var search_toggle = select('#search-bar');
+    var navbar_toggler = select('.navbar-toggler');
     on('click', '.navbar-toggle-box', function(e) {
       e.preventDefault()
+        console.log("Toggle click")
+        logo.classList.add('logo-hide');
+        search_toggle.classList.add('search-bar-show');
+        search_toggle.classList.remove('search-bar');
+        navbar_toggler.classList.add('logo-hide');
       body.classList.add('box-collapse-open')
       body.classList.remove('box-collapse-closed')
     });
