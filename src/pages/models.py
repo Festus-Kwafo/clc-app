@@ -1,16 +1,16 @@
 from django.db import models
 from django.utils.text import slugify
-import os
+from django.urls import reverse
+from pages.formatChecker import validate_file_size
 # Create your models here.
 
 
 class Sermon(models.Model):
-    title = models.CharField(max_length=100)
-    image_mobile = models.ImageField(upload_to='sermons/', default='sermons/default.jpg')
-    image_desktop = models.ImageField(upload_to='sermons/', default='sermons/default.jpg')
-    image_url = models.CharField(max_length=200, null=True, blank=True, default='sermons/default.jpg')
+    title = models.CharField(max_length=120)
+    image_mobile = models.ImageField(upload_to='sermons/mobile/image', default='sermons/default.jpg')
+    image_desktop = models.ImageField(upload_to='sermons/desktop/image', default='sermons/default.jpg')
     description = models.TextField()
-    audio = models.FileField(upload_to='sermons/')
+    audio = models.FileField(upload_to='sermons/', blank=True, null=True, validators=[validate_file_size])
     date = models.DateField()
     date_created = models.DateField(auto_now_add=True)
     date_updated = models.DateField(auto_now=True)
@@ -27,8 +27,12 @@ class Sermon(models.Model):
             self.image_url = self.image_mobile.url
         super().save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        return reverse('sermons', kwargs={'id': self.id})
+
     def __str__(self):
         return self.title
+
     class Meta:
         verbose_name_plural = 'Sermons'
         unique_together = ('title', 'date')

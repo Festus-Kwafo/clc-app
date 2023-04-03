@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG')
+DEBUG = os.environ.get('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ["*"]
 
@@ -123,7 +123,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-USE_S3 = os.environ.get('USE_S3')
+USE_S3 = os.environ.get('USE_S3') == 'True'
 if USE_S3:
     # aws settings
     AWS_ACCESS_KEY_ID =  os.environ.get("AWS_ACCESS_KEY")
@@ -147,8 +147,11 @@ if USE_S3:
     DEFAULT_FILE_STORAGE = 'core.config.PublicMediaStorage'
 else:
     STATIC_URL = '/static/'
-    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'dist'), os.path.join(BASE_DIR, 'static'))
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATIC_ROOT = BASE_DIR / 'staticfiles/'
+    STATICFILES_DIRS = [
+        BASE_DIR / "dist",
+        BASE_DIR / "static",
+    ]
     MEDIA_URL = '/media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
