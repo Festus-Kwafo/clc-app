@@ -19,8 +19,7 @@ class AboutView(View):
 
 class SermonView(View):
 
-    template_name = "templates/pages/sermon.html"
-
+    template_name = "templates/pages/sermon_transcription.html"
     def get(self, request):
         return render(request, self.template_name)
 
